@@ -24,8 +24,10 @@ To install and run this project locally, follow these steps:
 1. Clone the repository: `git clone https://github.com/jer1234/cdn-angular14.git`
 2. Navigate to the project directory: `cd  cdn-angular14`
 3. Install dependencies: `npm install  or npm install --force`
-4. Start the development server: `ng serve`
-5. Open your browser and visit `http://localhost:4200` to see the running application.
+4. Navigate to `/src/environments/environment.ts` and edit below variable:
+    - `apiUrl: ` with backend API url
+6. Start the development server: `ng serve`
+7. Open your browser and visit `http://localhost:4200` to see the running application.
 
 ## Usage
 
