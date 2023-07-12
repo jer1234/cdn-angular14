@@ -1,0 +1,28 @@
+.user-list-enter {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  
+  .user-list-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  .user-list-leave {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .user-list-leave-active {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 300ms, transform 300ms;
+  }
+
+
+  :host ::ng-deep .ng2-tag-input.bootstrap tag { 
+    font-size: 10px;
+
+  }
+  

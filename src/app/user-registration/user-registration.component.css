@@ -1,0 +1,28 @@
+.user-registration-enter {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  
+  .user-registration-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  .user-registration-leave {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .user-registration-leave-active {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+
+  :host ::ng-deep .ng2-tag-input.bootstrap tag { 
+    font-size: 10px;
+    background-color: lightskyblue;
+
+  }

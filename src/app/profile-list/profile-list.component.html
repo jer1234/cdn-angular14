@@ -1,0 +1,31 @@
+<div *ngIf="users?.length > 0" class="container">
+    <h3>CDN - All Profile Listing</h3>
+  
+    <div class="card-deck">
+      <div class="card" *ngFor="let user of users;let i=index">
+        <div class="card-body">
+          <h5 class="card-title">{{ user.username }}</h5>
+          <h6 class="card-title">Email: {{ user.email }}</h6>
+          <h6 class="card-title">Contact: {{ user.phoneNumber }}</h6>
+          <h6 class="card-title">Hobby: {{ user.hobby }}</h6>
+          <h6 class="card-title">Skillsets: <tag-input  [(ngModel)]="showOnlyTaglist[i]"  [modelAsStrings]="true" theme="bootstrap" class="tag" [disable]="true"  [hideForm] ="true"></tag-input> </h6>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="users?.length == 0" class="container">
+    <div class="d-flex justify-content-center">
+      <div class="w-25 h-25 ">
+      <ng-lottie height="auto" [options]="options"></ng-lottie>
+      <h2>Oops ! Looks like no record. </h2>
+    </div>   
+    </div>
+  </div>
+
+
+
+  
+  
