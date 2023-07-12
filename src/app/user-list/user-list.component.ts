@@ -51,7 +51,9 @@ export class UserListComponent implements OnInit {
       this.users =res;
       this.users.forEach((obj: { skillsets: string; }) => {
         let temp: any[] = [];
-        temp = obj.skillsets.split(';').length >= 1 ? obj.skillsets.split(';'): [] ;
+        if(obj.skillsets != "")
+          temp = obj.skillsets.split(';').length >= 1 ? obj.skillsets.split(';'): [obj.skillsets] ;
+
         this.showOnlyTaglist.push(temp);
       });
     });
@@ -68,7 +70,10 @@ export class UserListComponent implements OnInit {
       skillsets:user.skillsets
     }
     this.updateForm.setValue(this.edit_user_data);
-    this.taglist = user.skillsets.split(';').length >= 1 ? user.skillsets.split(';'): [] ;
+    if(user.skillsets != "")
+      this.taglist = user.skillsets.split(';').length >= 1 ? user.skillsets.split(';'): [user.skillsets] ;
+    else
+      this.taglist=[];
   }
 
   deleteUser(user: any) {
