@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Profile } from '../profile.model';
-import { User } from '../user.model';
 import { UserService } from '../user.service';
 import { AnimationOptions } from 'ngx-lottie';
 
@@ -35,23 +33,4 @@ export class ProfileListComponent implements OnInit  {
     });
   }
 
-
-
-  profiles: Profile[] = [
-    {
-      id: 1,
-      name: 'John Doe',
-      pictureUrl: 'https://example.com/john-doe.jpg'
-    },
-    {
-      id: 2,
-      name: 'Jane Smith',
-      pictureUrl: 'https://example.com/jane-smith.jpg'
-    },
-    {
-      id: 3,
-      name: 'Alex Johnson',
-      pictureUrl: 'https://example.com/alex-johnson.jpg'
-    }
-  ];
 }
