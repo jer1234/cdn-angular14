@@ -21,7 +21,7 @@ export class UserService {
   }
 
   getUsers(){
-    return this._http.get(`${environment.apiUrl}/user`, {observe: 'response'});
+    return this._http.get(`${environment.apiUrl}/user`);
   }
 
   addUser(user: User) {
