@@ -27,7 +27,9 @@ export class ProfileListComponent implements OnInit  {
       this.users =res;
       this.users.forEach((obj: { skillsets: string; }) => {
         let temp: any[] = [];
-        temp = obj.skillsets.split(';').length >= 1 ? obj.skillsets.split(';'): [] ;
+        if(obj.skillsets != "")
+          temp = obj.skillsets.split(';').length >= 1 ? obj.skillsets.split(';'): [obj.skillsets] ;
+          
         this.showOnlyTaglist.push(temp);
       });
     });
