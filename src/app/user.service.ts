@@ -13,19 +13,19 @@ export class UserService {
   updateUser(user: User) {
     return this._http.put<User>(`${environment.apiUrl}/user/${user.username}`, user, {observe: 'response'});
   }
-  getUserById(userId: any): User {
-    throw new Error('Method not implemented.');
-  }
+  // getUserById(userId: any): User {
+  //   throw new Error('Method not implemented.');
+  // }
   deleteUser(username: User) {
     return this._http.delete(`${environment.apiUrl}/user/${username}`, {observe: 'response'});
   }
 
   getUsers(){
-    return this._http.get(`${environment.apiUrl}/user/getAll`);
+    return this._http.get(`${environment.apiUrl}/user`, {observe: 'response'});
   }
 
   addUser(user: User) {
-    return this._http.post<User>(`${environment.apiUrl}/user/createNew`, user, {observe: 'response'});
+    return this._http.post<User>(`${environment.apiUrl}/user`, user, {observe: 'response'});
   }
 
 
