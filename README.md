@@ -44,7 +44,7 @@ Once the project is running, you can perform the following actions:
   ![image](https://github.com/jer1234/cdn-angular14/assets/44467321/0bdf40e6-2295-484b-becd-c7a2e5d3c9ab)
 
 -Empty listing
-![image](https://github.com/jer1234/cdn-angular14/assets/44467321/27976449-9fae-4d12-b9fb-32be324a1dde)
+  ![image](https://github.com/jer1234/cdn-angular14/assets/44467321/27976449-9fae-4d12-b9fb-32be324a1dde)
 
 
 ## Deployment
