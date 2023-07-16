@@ -19,7 +19,6 @@ export class UserRegistrationComponent {
   }
 
   registerUser() {
-    console.log(this.user);
   if(this.user.username &&  this.user.username !="" && this.user.phoneNumber&& this.user.phoneNumber !="" && this.user.hobby && this.user.hobby !="" && this.user.email && this.user.email !=""){
      this.user.skillsets = this.skillTags.join(';');
       this.userService.addUser(this.user).subscribe((res)=>{

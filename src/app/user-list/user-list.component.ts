@@ -118,7 +118,6 @@ export class UserListComponent implements OnInit {
       skillsets:this.taglist.join(';')
     };
     if(this.edit_user_data.email !="" && this.edit_user_data.phoneNumber !="" && this.edit_user_data.phoneNumber !=""){
-      console.log("SINI",this.edit_user_data,this,this.taglist);
       this.userService.updateUser(this.edit_user_data).subscribe(res=>{
       if(res.status == 200){
         Swal.fire({
