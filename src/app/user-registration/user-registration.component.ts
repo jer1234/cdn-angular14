@@ -21,20 +21,33 @@ export class UserRegistrationComponent {
   registerUser() {
   if(this.user.username &&  this.user.username !="" && this.user.phoneNumber&& this.user.phoneNumber !="" && this.user.hobby && this.user.hobby !="" && this.user.email && this.user.email !=""){
      this.user.skillsets = this.skillTags.join(';');
-      this.userService.addUser(this.user).subscribe((res)=>{
+      this.userService.addUser(this.user).subscribe(
+      res=>{
       if(res.status == 200){
         Swal.fire({
           title: " User Added!",
           icon: "success",
         });
         this.router.navigate(['/users']);
-      }else{
+      }
+      
+    },
+    err=>{
+      if(err.status ==400){
+        Swal.fire({
+          title: "Oops!",
+          text:"Username Exist!",
+          icon: "error",
+        });
+      }
+      else{
         Swal.fire({
           title: "Oops!",
           icon: "error",
         });
       }
-    });
+    }
+    );
     }
     else{
       Swal.fire({
